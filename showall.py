@@ -5,8 +5,8 @@ import json
 
 DIMENSIONS = {
     0: 'Overworld',
-    1: 'Nether',
-    2: 'End'
+    -1: 'Nether',
+    1: 'End'
 }
 
 whitelist = json.loads(open('whitelist.json').read())
