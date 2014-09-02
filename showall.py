@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from nbt.nbt import NBTFile
 from os import listdir
 import json
@@ -8,8 +9,8 @@ for o in whitelist:
     playermap[o['uuid']] = o['name']
 
 
-for f in listdir('./dat/'):
-    p = NBTFile(filename='dat/{}'.format(f))
+for f in listdir('./world/playerdata/'):
+    p = NBTFile(filename='world/playerdata/{}'.format(f))
     print '*******************************************'
     print "{} {}".format(playermap.get(f.replace('.dat', ''), 'unknown'), [i.value for i in p['Pos']])
     print '*******************************************'
