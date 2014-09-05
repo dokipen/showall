@@ -1,0 +1,9 @@
+<ul>
+  {% for name, player in players %}
+  <li>
+    <h4>{{ name }}</h4>
+  </li>
+  {% else %}
+  <h2>No Data Found<h2>
+  {% endfor %}
+</ul>
